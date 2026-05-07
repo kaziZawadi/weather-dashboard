@@ -30,7 +30,7 @@ function App() {
 
       // 2. Chercher la météo
       const weatherResponse = await fetch(
-        `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,weather_code, wind_speed_10m`,
+        `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,weather_code,wind_speed_10m`,
       );
 
       const weatherData = await weatherResponse.json();
