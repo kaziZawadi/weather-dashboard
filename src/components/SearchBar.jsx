@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function SearchBar({ onSearch }) {
+function SearchBar({ onSearch, loading }) {
   const [city, setCity] = useState("");
 
   function handleSubmit(e) {
@@ -19,7 +19,9 @@ function SearchBar({ onSearch }) {
         onChange={(e) => setCity(e.target.value)}
         placeholder="Rechercher une ville..."
       />
-      <button type="submit">Rechercher</button>
+      <button type="submit" disabled={loading}>
+        {loading ? "Recherche..." : "Rechercher"}
+      </button>
     </form>
   );
 }

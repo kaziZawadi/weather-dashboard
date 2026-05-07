@@ -12,3 +12,19 @@ body {
   padding: 20px;
   border-radius: 12px;
 }
+
+.weather-card {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f9fafb;
+  border: 1px solid #ddd;
+}
+
+.weather-card h2 {
+  margin-top: 0;
+}
+
+.weather-card p {
+  font-size: 18px;
+}
