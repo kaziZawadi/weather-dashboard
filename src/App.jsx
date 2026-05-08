@@ -30,17 +30,19 @@ function App() {
 
       // 2. Chercher la météo
       const weatherResponse = await fetch(
-        `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,weather_code,wind_speed_10m`,
+        `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m`,
       );
 
       const weatherData = await weatherResponse.json();
 
       setWeather({
         city: geoData.results[0].name,
-        temperature: weatherData.current.temperature_2m,
-        code: weatherData.current.weather_code,
-        wind: weatherData.current.wind_speed_10m,
         country: geoData.results[0].country_code,
+
+        temperature: weatherData.current.temperature_2m,
+        feelsLike: weatherData.current.apparent_temperature,
+        wind: weatherData.current.wind_speed_10m,
+        code: weatherData.current.weather_code,
       });
     } catch (error) {
       console.error(error);

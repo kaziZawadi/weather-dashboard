@@ -15,16 +15,71 @@ body {
 
 .weather-card {
   margin-top: 20px;
-  padding: 20px;
-  border-radius: 12px;
-  background: #f9fafb;
-  border: 1px solid #ddd;
+  padding: 24px;
+  border-radius: 16px;
+  background: linear-gradient(to bottom, #f8fafc, #e2e8f0);
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.88);
 }
 
 .weather-card h2 {
   margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 28px;
 }
 
 .weather-card p {
   font-size: 18px;
+  margin: 8px 0;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.sunny {
+  background: linear-gradient(to bottom right, #facc15, #f97316);
+  color: white;
+}
+
+.cloudy {
+  background: linear-gradient(to bottom right, #94a3b8, #64748b);
+  color: white;
+}
+
+.rainy {
+  background: linear-gradient(to bottom right, #334155, #0f172a);
+  color: white;
+}
+
+.snowy {
+  background: linear-gradient(to bottom right, #e2e8f0, #cbd5e1);
+  color: #111827;
+}
+
+.default-weather {
+  background: linear-gradient(to bottom right, #f8fafc, #e2e8f0);
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
