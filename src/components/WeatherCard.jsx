@@ -24,6 +24,8 @@ function WeatherCard({ weather }) {
 
     if ([71, 73, 75].includes(code)) return "❄️";
 
+    if ([95, 96, 99].includes(code)) return "⛈️";
+
     return "🌍";
   }
 
@@ -32,6 +34,7 @@ function WeatherCard({ weather }) {
     if ([1, 2, 3].includes(code)) return "cloudy";
     if ([51, 53, 55, 61, 63, 65].includes(code)) return "rainy";
     if ([71, 73, 75].includes(code)) return "snowy";
+    if ([95, 96, 99].includes(code)) return "stormy";
 
     return "default-weather";
   }

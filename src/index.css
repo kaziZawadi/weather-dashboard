@@ -59,6 +59,11 @@ form {
   color: #111827;
 }
 
+.stormy {
+  background: linear-gradient(to bottom right, #1e293b, #020617);
+  color: white;
+}
+
 .default-weather {
   background: linear-gradient(to bottom right, #f8fafc, #e2e8f0);
 }
